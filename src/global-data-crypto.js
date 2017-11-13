@@ -1,7 +1,6 @@
 const request = require('superagent');
 const json2csv = require('json2csv');
 const unixDate = require('unix-time');
-
 const fs = require('fs');
 
 const startYear = 2017;
@@ -18,10 +17,6 @@ const item = [];
 
 function jsontocsv(data) {
   const fields = ['currency', 'price', 'date'];
-
-  data.forEach((element) => {
-    console.log(element);
-  }, this);
   const csv = json2csv({ data, fields });
   fs.writeFile(`raw_${dataCurrency}.csv`, csv, (err) => {
     if (err) throw err;
