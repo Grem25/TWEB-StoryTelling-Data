@@ -15,15 +15,13 @@
   "bugs": {
     "url": "https://github.com/Grem25/TWEB-StoryTelling-Data/issues"
   },
-  "homepage": "https://github.com/Grem25/TWEB-StoryTelling-Data#readme",
-  "devDependencies": {
+  "dependencies": {
     "eslint": "^4.10.0",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.8.0",
-    "json2csv": "^3.11.5",
-    "normalize-date": "0.0.3",
     "superagent": "^3.8.0",
+    "json2csv": "^3.11.5",
     "unix-time": "^1.0.1",
-    "unix-timestamp": "^0.2.0"
-  }
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
+  },
+  "homepage": "https://github.com/Grem25/TWEB-StoryTelling-Data#readme"
 }
