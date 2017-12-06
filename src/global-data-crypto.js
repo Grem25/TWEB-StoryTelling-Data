@@ -1,16 +1,24 @@
+/*
+Author: Zanone Jérémie
+Description: Allow to fetch cryptocurrencies's day price from
+             CryptoCompare's API
+*/
 const request = require('superagent');
 const json2csv = require('json2csv');
 const unixDate = require('unix-time');
 const fs = require('fs');
 
+// set the start date that you want to fetch data from API
 const startYear = 2017;
 const startMonth = 1;
 const startDay = 1;
 
+// set the end date
 const endYear = 2017;
 const endMonth = 11;
 const endDay = 4;
 
+// set the Currency Symbol
 const dataCurrency = 'DASH';
 
 const item = [];
@@ -32,6 +40,7 @@ function fetchData(startDate, endDate) {
     .end((err, res) => {
       const data = {};
       data.currency = dataCurrency;
+      // here you have to change the cryptoCurrency (current: DASH)
       data.price = res.body.DASH.USD;
       data.date = startDate;
       item.push(data);
